@@ -1,0 +1,34 @@
+{
+  "ruleId": "AQ-006",
+  "configure": {
+    "AQ-006": {
+      "values": [
+        "配合饲料",
+        "冰鲜鱼",
+        "水质改良剂",
+        "抗菌药",
+        "杀虫药",
+        "消毒剂",
+        "疫苗"
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "AQ-006-compliant.json",
+      "expect": {
+        "ruleId": "AQ-006",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "AQ-006-unsafe.json",
+      "expect": {
+        "ruleId": "AQ-006",
+        "count": 1
+      }
+    }
+  ]
+}
