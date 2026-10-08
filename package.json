@@ -1,6 +1,6 @@
 {
   "name": "dsh-aqua-input-check",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "水产养殖投入品记录核对（按投入品用量、休药期与起捕间隔核对记录自洽，仅提示差异，不作出定性结论）",
   "type": "module",
   "main": "lib/index.mjs",
