@@ -1,4 +1,26 @@
-# dsh-aqua-input-check
+# dsh-aqua-input-check — Aquaculture input register completeness and withdrawal-period date check
+
+`dsh-aqua-input-check` reads one aquaculture input register — the farm header plus one row per input record — and checks that register's own completeness and date arithmetic: that each record names its pond and species, that a named input records its quantity and use date, that the use date is not in the future, that harvesting respects the withdrawal period the record itself states, that a stocking record carries its source and quarantine certificate number, that the input type comes from your configured vocabulary, and that batch numbers are unique.
+It does not decide whether farming practice is compliant, whether the product is safe to eat, whether medication was appropriate, or whether a penalty applies.
+
+## What it answers
+
+| You ask | What it answers |
+|---|---|
+| A record names the input but leaves the pond and the species column empty. | `AQ-001` requires at least one of `pondNo` and `species` on every record. It only checks that one of the two is filled in, and does not judge whether that input is suitable for that species. |
+| The input name is there, but the quantity and the use date are blank. | `AQ-002` asks for `inputQty` and `usedAt` whenever `inputName` is filled in. It checks that the fields are recorded, not that the dosage is appropriate or that the medication suits the disease. |
+| The use date is written as `15/03/2026`, and one row carries next month's date. | `AQ-003` accepts `2026-03-15` and `2026-03-15 09:30`; a `usedAt` it cannot parse is reported as unparseable, and one later than the check date is reported as a future date. It does not touch the withdrawal period — the pack ships no withdrawal days at all. |
+| We treated on 1 June with 20 withdrawal days recorded and harvested on 15 June. Is that caught? | Yes. `AQ-004` compares `usedAt`, `harvestAt` and the record's own `withdrawalDays`, and reports the row as short by the difference. A finding means "by the withdrawal period you recorded, harvest came early" — not that the product is unsafe, which needs a residue test this plugin cannot see. If those three fields are not all filled and parseable, the rule reports `skipped` instead of assuming a period. |
+| The input type we use is not in the list — nothing is reported. | `AQ-006` reports `skipped` because the pack ships no input-type vocabulary: `values` is empty until you configure one. Once set, the rule checks that the stored `inputType` is one of your values. It does not judge whether that input may lawfully be used — that needs the prohibited-drug list and the product's approval number. |
+| The same batch number appears in two rows. | `AQ-007` reports the repeat and names both rows. It compares with whitespace ignored; several input entries for one batch are normal as long as they share the batch number — do not reuse the row-number column for it. With no batch-number column it reports that it could not run instead of passing silently. |
+
+## Standards it follows
+
+| Document | Number | Cited by rules |
+|---|---|---|
+| 《水产养殖质量安全管理规定》 | 农业部令（现行令号与条号本次未核实） | AQ-001, AQ-002, AQ-005, AQ-007 |
+| 《绿色食品 渔药使用准则》 | NY/T 755—2022（2022-07-11 发布、2022-10-01 实施；全部代替已废止的 NY/T 755—2013；属绿色食品系列标准；条号本次未取得） | AQ-003, AQ-004 |
+| 本机构养殖生产管理口径（本机构配置） | 无统一标准（本条依据为本机构配置的类型口径） | AQ-006 |
 
 **Boundary:** this plugin checks an **水产养殖投入品记录** for completeness and date arithmetic — that each record
 names its pond and species, that a named input records its quantity and use date, that the use date is not in the

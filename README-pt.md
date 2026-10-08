@@ -1,4 +1,26 @@
-# dsh-aqua-input-check
+# dsh-aqua-input-check — Completude do registo de insumos de aquicultura e verificação de datas do período de retirada
+
+`dsh-aqua-input-check` lê um registo de insumos de aquicultura —o cabeçalho da exploração mais uma linha por registo de insumo— e verifica a completude e a aritmética de datas desse registo: se cada registo indica o seu tanque e a sua espécie, se um insumo com nome registado indica a sua quantidade e a sua data de utilização, se a data de utilização não é futura, se a colheita respeita o período de retirada que o próprio registo declara, se o registo de povoamento anota a sua origem e o seu número de certificado de quarentena, se o tipo de insumo vem do vocabulário que você configurar e se os números de lote são únicos.
+Não decide se a prática de cultivo está em conformidade, se o produto é seguro para consumo, se a medicação foi adequada ou se é devida uma sanção.
+
+## O que ele responde
+
+| Você pergunta | O que ele responde |
+|---|---|
+| Um registo indica o insumo, mas deixa vazias as colunas do tanque e da espécie. | `AQ-001` exige pelo menos um de `pondNo` e `species` em cada registo. Apenas verifica que um dos dois está preenchido e não julga se esse insumo é adequado a essa espécie. |
+| O nome do insumo está preenchido, mas a quantidade e a data de utilização estão vazias. | `AQ-002` exige `inputQty` e `usedAt` sempre que `inputName` esteja preenchido. Verifica que os campos estão registados, não que a dose seja adequada nem que o medicamento corresponda à doença. |
+| A data de utilização está escrita como `15/03/2026` e uma linha traz a data do mês seguinte. | `AQ-003` aceita `2026-03-15` e `2026-03-15 09:30`; um `usedAt` que não consegue analisar é reportado como não analisável, e um posterior à data de verificação é reportado como data futura. Não toca no período de retirada: o pacote não inclui qualquer número de dias de retirada. |
+| Tratámos a 1 de junho com 20 dias de retirada registados e colhemos a 15 de junho. Isso é detetado? | Sim. `AQ-004` compara `usedAt`, `harvestAt` e o `withdrawalDays` que o próprio registo indica, e reporta a linha com os dias em falta. Um achado significa «segundo o período de retirada que você registou, a colheita chegou antes», não que o produto seja inseguro: isso exige um resultado de resíduos que este plugin não consegue ver. Se os três campos não estiverem todos preenchidos e analisáveis, a regra reporta `skipped` em vez de presumir um período. |
+| O tipo de insumo que usamos não está na lista e nada é reportado. | `AQ-006` reporta `skipped` porque o pacote não traz qualquer vocabulário de tipos de insumo: `values` está vazio até você o configurar. Depois de configurado, a regra verifica que o `inputType` registado é um dos seus valores. Não julga se esse insumo pode ser legalmente utilizado: isso exige a lista de medicamentos proibidos e o número de aprovação do produto. |
+| O mesmo número de lote aparece em duas linhas. | `AQ-007` reporta a repetição e indica as duas linhas. Compara ignorando os espaços em branco; vários registos de insumo para um mesmo lote são normais desde que partilhem o número de lote: não reutilize para isso a coluna do número de linha. Sem coluna de número de lote, reporta que não pôde ser executada em vez de passar em silêncio. |
+
+## Normas que segue
+
+| Documento | Número | Regras que o citam |
+|---|---|---|
+| 《水产养殖质量安全管理规定》 | 农业部令（现行令号与条号本次未核实） | AQ-001, AQ-002, AQ-005, AQ-007 |
+| 《绿色食品 渔药使用准则》 | NY/T 755—2022（2022-07-11 发布、2022-10-01 实施；全部代替已废止的 NY/T 755—2013；属绿色食品系列标准；条号本次未取得） | AQ-003, AQ-004 |
+| 本机构养殖生产管理口径（本机构配置） | 无统一标准（本条依据为本机构配置的类型口径） | AQ-006 |
 
 **Boundary:** this plugin checks an **水产养殖投入品记录** for completeness and date arithmetic — that each record
 names its pond and species, that a named input records its quantity and use date, that the use date is not in the
