@@ -41,8 +41,7 @@ appropriate, or whether a penalty applies.
 ## Install
 
 ```sh
-pnpm pack
-dsh plugin --profile <name> add ./*.tgz
+dsh plugin --profile <name> add dsh-aqua-input-check
 dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
 ```
 

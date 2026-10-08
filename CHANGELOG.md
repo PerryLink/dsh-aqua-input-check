@@ -2,4 +2,9 @@
 
 ## 0.1.0
 
-- Initial release — 水产养殖投入品记录核对（按投入品用量、休药期与起捕间隔核对记录自洽，仅提示差异，不作出定性结论）
+- Release infrastructure brought to the family standard: `verify:self-contained`,
+  `check:lockfile` and `check:readmes` gates, a `prepublishOnly` that re-runs the whole chain,
+  SECURITY.md, dependabot, and the OpenSSF Scorecard workflow.
+- The README install command now names the published package instead of a local tarball.
+- Rule pack: 7 rules across AQ-001..AQ-007.
+- Licensed Apache-2.0.
