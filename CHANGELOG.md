@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.7] - 2026-10-18
+
+### Fixed
+
+- **AQ-003 title matches the check.** The rule said “use date and withdrawal period must be parseable”, but the implementation only parses `usedAt` and rejects future dates; the README already said it does not touch the withdrawal period. Title changed to “use date must be parseable and not later than the check date”.
+
 ## [0.2.6] - 2026-10-18
 
 ### Changed
