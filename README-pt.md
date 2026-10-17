@@ -7,7 +7,9 @@ Não decide se a prática de cultivo está em conformidade, se o produto é segu
 
 ## Como é a saída
 
-![Terminal demo of dsh-aqua-input-check: real output over its AQ-003 fixture](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-demo.png)
+![Terminal demo of dsh-aqua-input-check: real output over its AQ-003 fixture](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-hero.png)
+
+![Animated terminal demo of dsh-aqua-input-check](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-demo.gif)
 
 Saída real deste plugin sobre o seu próprio fixture de teste `AQ-003` — não é uma simulação. O pacote de regras não inventa citações, por isso cada achado nomeia a cláusula aplicada e avisa que o seu texto não foi obtido.
 

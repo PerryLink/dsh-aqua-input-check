@@ -7,7 +7,9 @@
 
 ## 实际输出长什么样
 
-![Terminal demo of dsh-aqua-input-check: real output over its AQ-003 fixture](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-demo.png)
+![Terminal demo of dsh-aqua-input-check: real output over its AQ-003 fixture](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-hero.png)
+
+![Animated terminal demo of dsh-aqua-input-check](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-demo.gif)
 
 本插件对自己 `AQ-003` 测试夹具的**真实输出**，不是示意图。规则库不伪造引文，因此每条发现都会同时写明所引条款，以及该条款原文本次未取得。
 

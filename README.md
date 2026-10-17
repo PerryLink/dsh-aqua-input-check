@@ -7,7 +7,9 @@ It does not decide whether farming practice is compliant, whether the product is
 
 ## What it looks like
 
-![Terminal demo of dsh-aqua-input-check: real output over its AQ-003 fixture](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-demo.png)
+![Terminal demo of dsh-aqua-input-check: real output over its AQ-003 fixture](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-hero.png)
+
+![Animated terminal demo of dsh-aqua-input-check](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-demo.gif)
 
 Real output from this plugin over its own `AQ-003` test fixture — not a mock-up. The rule pack ships no invented quotations, so a finding names both the clause it applied and the fact that the clause text was not obtained.
 

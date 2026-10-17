@@ -1,0 +1,14 @@
+[
+  {
+    "path": "docs/assets/dsh-aqua-input-check-hero.png",
+    "kind": "hero",
+    "alt": "dsh-aqua-input-check terminal output",
+    "caption": "Real dsh-aqua-input-check checker output; 31 tests passed."
+  },
+  {
+    "path": "docs/assets/dsh-aqua-input-check-demo.gif",
+    "kind": "demo",
+    "alt": "Animated dsh-aqua-input-check terminal session",
+    "caption": "The same run, assembled line by line."
+  }
+]
