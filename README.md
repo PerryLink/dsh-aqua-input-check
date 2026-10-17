@@ -5,6 +5,13 @@
 `dsh-aqua-input-check` reads one aquaculture input register — the farm header plus one row per input record — and checks that register's own completeness and date arithmetic: that each record names its pond and species, that a named input records its quantity and use date, that the use date is not in the future, that harvesting respects the withdrawal period the record itself states, that a stocking record carries its source and quarantine certificate number, that the input type comes from your configured vocabulary, and that batch numbers are unique.
 It does not decide whether farming practice is compliant, whether the product is safe to eat, whether medication was appropriate, or whether a penalty applies.
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-aqua-input-check
+dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
+```
+
 ## What it looks like
 
 ![Terminal demo of dsh-aqua-input-check: real output over its AQ-003 fixture](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-hero.png)
@@ -80,13 +87,6 @@ record — applies a versioned rule pack, and returns a report.
 | `AQ-005` | stocking records its source and quarantine number | warn | principle |
 | `AQ-006` | the input type comes from your vocabulary (off by default) | info | local |
 | `AQ-007` | batch numbers are unique | warn | principle |
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-aqua-input-check
-dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
-```
 
 ## Configuration
 

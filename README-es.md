@@ -5,6 +5,13 @@
 `dsh-aqua-input-check` lee un registro de insumos de acuicultura —la cabecera de la granja más una fila por registro de insumo— y comprueba la completitud y la aritmética de fechas de ese registro: que cada registro indique su estanque y su especie, que un insumo con nombre registre su cantidad y su fecha de uso, que la fecha de uso no sea futura, que la cosecha respete el periodo de retiro que el propio registro declara, que el registro de siembra anote su origen y su número de certificado de cuarentena, que el tipo de insumo provenga del vocabulario que usted configure y que los números de lote sean únicos.
 No decide si la práctica de cultivo cumple la normativa, ni si el producto es apto para el consumo, ni si la medicación fue adecuada, ni si procede una sanción.
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-aqua-input-check
+dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
+```
+
 ## Cómo se ve la salida
 
 ![Terminal demo of dsh-aqua-input-check: real output over its AQ-003 fixture](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-hero.png)
@@ -69,13 +76,6 @@ appropriate, or whether a penalty applies.
 ## What it does
 
 La tabla de reglas, los campos y el comportamiento detallado están en [README.md](README.md#what-it-does) (versión principal en inglés). El plugin sólo enumera divergencias literales frente a las cláusulas citadas e indica en `skipped` cada comprobación que no pudo ejecutarse.
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-aqua-input-check
-dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
-```
 
 ## Configuration
 

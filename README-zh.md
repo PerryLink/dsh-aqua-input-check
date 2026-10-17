@@ -5,6 +5,13 @@
 `dsh-aqua-input-check` 读取一份水产养殖投入品记录——养殖场表头加每条投入品记录一行——核对这份记录自身的齐备与日期算术：每条记录是否写明塘口与养殖品种、写了名称的投入品是否记录了投入量与使用日期、使用日期是否晚于核对日、起捕是否满足记录自己写的休药期、投苗记录是否写了苗种来源与检疫证号、投入品类型是否取自你配置的取值口径、批次编号是否唯一。
 它不判定养殖过程是否合规、水产品是否安全可食、用药是否恰当，也不判定是否应当处罚。
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-aqua-input-check
+dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
+```
+
 ## 实际输出长什么样
 
 ![Terminal demo of dsh-aqua-input-check: real output over its AQ-003 fixture](https://raw.githubusercontent.com/PerryLink/dsh-aqua-input-check/main/docs/assets/dsh-aqua-input-check-hero.png)
@@ -69,13 +76,6 @@ appropriate, or whether a penalty applies.
 ## What it does
 
 规则表、字段说明与行为细节见 [README.md](README.md#what-it-does)（英文主版本）。本插件只列出材料与所引条款之间的字面差异，并对无法执行的检查在 `skipped` 中逐项说明。
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-aqua-input-check
-dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
-```
 
 ## Configuration
 
