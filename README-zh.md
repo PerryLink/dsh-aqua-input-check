@@ -1,5 +1,7 @@
 # dsh-aqua-input-check — 水产养殖投入品记录齐备与休药期日期核对
 
+[English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
+
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
 
 `dsh-aqua-input-check` 读取一份水产养殖投入品记录——养殖场表头加每条投入品记录一行——核对这份记录自身的齐备与日期算术：每条记录是否写明塘口与养殖品种、写了名称的投入品是否记录了投入量与使用日期、使用日期是否晚于核对日、起捕是否满足记录自己写的休药期、投苗记录是否写了苗种来源与检疫证号、投入品类型是否取自你配置的取值口径、批次编号是否唯一。
