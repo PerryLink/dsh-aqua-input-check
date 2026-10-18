@@ -43,23 +43,20 @@ dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
 
 **边界（中文译文，以英文原文为准）：** 本插件核对一份**水产养殖投入品记录**的齐备性与日期算术——每条记录是否写明塘口与养殖品种，写了名称的投入品是否记录投入量与使用日期，使用日期是否不在未来，起捕是否遵守记录自己写明的休药期，投苗记录是否写明苗种来源与检疫证号，投入品类型是否取自你配置的取值口径，批次编号是否唯一。它**不**判定养殖过程是否合规、产品是否安全可食、用药是否恰当，也不判定是否应当处罚。
 
-> ### ⚠️ What this plugin deliberately does not know
+> ### ⚠️ 本插件有意不知道的内容（以英文原文为准）
 >
-> **It ships no withdrawal periods.** `AQ-004` checks that the harvest date is at least as many days after the use
-> date as **the record's own withdrawal-period column says**. So a finding means "**by the withdrawal period you
-> recorded, harvest came N days early**" — never "this product is unsafe". Residue safety needs a test result,
-> which this plugin cannot see. A record with no harvest date reports itself in `skipped` rather than assuming a
-> period.
+> **它不提供任何休药期。** `AQ-004` 核对的是：起捕日期至少比使用日期晚**记录自身休药期一栏所写的天数**。
+> 因此，一条发现意味着“**按你记录的休药期计算，起捕早了 N 天**”——绝不意味着“该产品不安全”。
+> 残留安全性需要检测结果，而本插件无法看到检测结果。没有起捕日期的记录会在 `skipped` 中自行报告，
+> 而不是假定一个休药期。
 >
-> **It ships no list of permitted or prohibited inputs.** `AQ-006` checks that the input type is one you
-> configured; whether a product may lawfully be used requires the prohibited-drug list and the product's approval
-> number, and this plugin does not go there.
+> **它不提供允许或禁止使用的投入品清单。** `AQ-006` 核对投入品类型是否为你所配置的类型；
+> 某产品是否可以合法使用，需要禁用药品清单与产品批准文号，而本插件不涉及这些。
 >
-> **Every `excerpt` in the rule pack says, in so many words, that the clause text was not obtained.** The regime
-> lives in 《水产养殖质量安全管理规定》, NY 5361, NY/T 755 and GB 13078. The verification pass could not
-> retrieve verbatim clause text, so the pack states the gap in the `excerpt` field itself and keeps every rule at
-> `warn` or `info`. **When the texts are in hand, replace each `excerpt` with the real clause and raise `kind`
-> to `direct`.**
+> **规则包中的每一条 `excerpt` 都明确写着：本次未取得条款原文。** 该制度见诸
+> 《水产养殖质量安全管理规定》、NY 5361、NY/T 755 与 GB 13078。核验环节未能取得逐字条款原文，
+> 因此规则包在 `excerpt` 字段本身写明这一缺口，并将每条规则保持在 `warn` 或 `info`。
+> **取得文本后，应将每条 `excerpt` 替换为真实条款，并将 `kind` 提升为 `direct`。**
 
 ## Compatibility
 
