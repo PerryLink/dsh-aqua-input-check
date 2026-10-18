@@ -41,12 +41,7 @@ dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
 | 《绿色食品 渔药使用准则》 | NY/T 755—2022（2022-07-11 发布、2022-10-01 实施；全部代替已废止的 NY/T 755—2013；属绿色食品系列标准；条号本次未取得） | AQ-003, AQ-004 |
 | 本机构养殖生产管理口径（本机构配置） | 无统一标准（本条依据为本机构配置的类型口径） | AQ-006 |
 
-**Boundary:** this plugin checks an **水产养殖投入品记录** for completeness and date arithmetic — that each record
-names its pond and species, that a named input records its quantity and use date, that the use date is not in the
-future, that harvesting respects the withdrawal period the record states, that stocking records its source and
-quarantine certificate, that the input type comes from your vocabulary, and that batch numbers are unique. It does
-**not** decide whether farming practice is compliant, whether the product is safe to eat, whether medication was
-appropriate, or whether a penalty applies.
+**边界（中文译文，以英文原文为准）：** 本插件核对一份**水产养殖投入品记录**的齐备性与日期算术——每条记录是否写明塘口与养殖品种，写了名称的投入品是否记录投入量与使用日期，使用日期是否不在未来，起捕是否遵守记录自己写明的休药期，投苗记录是否写明苗种来源与检疫证号，投入品类型是否取自你配置的取值口径，批次编号是否唯一。它**不**判定养殖过程是否合规、产品是否安全可食、用药是否恰当，也不判定是否应当处罚。
 
 > ### ⚠️ What this plugin deliberately does not know
 >
