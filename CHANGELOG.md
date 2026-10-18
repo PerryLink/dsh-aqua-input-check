@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.11] - 2026-10-18
+
+### Changed
+
+- **Build tools moved out of runtime dependencies.** `tsdown` and `typescript` are devDependencies; a published checker no longer pulls a 47 MB build chain into the profile. This is the pilot for the same change across the 53-checker family.
+
 ## [0.2.10] - 2026-10-18
 
 ### Fixed
