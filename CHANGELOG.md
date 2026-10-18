@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.10] - 2026-10-18
+
+### Fixed
+
+- **Re-release from a clean, tagged source tree.** The 0.2.9 npm artifact declared a version that existed only in a dirty worktree: `main` (and the published `gitHead`) still said 0.2.8, with no tag or Release. 0.2.10 is cut from the committed source and restores the tag → version → artifact chain.
+
 ## [0.2.8] - 2026-10-18
 
 ### Changed
