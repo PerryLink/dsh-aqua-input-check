@@ -36,6 +36,35 @@ Salida real de este plugin sobre su propio fixture de prueba `AQ-003` — no es 
 La tabla siguiente es el conjunto de ejemplos: la primera fila es el caso detallado y las demás son casos breves.
 
 
+#### Salida detallada
+
+**Herramienta** `aqua_input_check`
+
+**Entrada**
+
+~~~json
+{"rows":[{"序号":"1","塘口编号":"","养殖品种":"","投苗日期":"2026-02-20", ...}]}
+~~~
+ 
+**Salida**
+
+~~~json
+{
+  "id": "dsh-aqua-input-check.AQ-001.de09b5a6",
+  "ruleId": "AQ-001",
+  "severity": "warn",
+  "locator": {
+    "row": 1,
+    "field": "pondNo"
+  },
+  "found": "第 1 行 pondNo、species 都为空",
+  "expected": "pondNo、species 至少应填写一项",
+  "fix": "补填塘口编号与养殖品种；本条只核对是否填写"
+}
+~~~
+
+*Observado en `dsh-aqua-input-check/tests/fixtures/AQ-001/AQ-001-unsafe.json; dsh-aqua-input-check/tests/fixtures/AQ-001/cases.json; dsh-aqua-input-check/rules/aqua-input-check.yaml; dsh-aqua-input-check/tests/index.test.ts`*
+
 | Usted pregunta | Qué responde |
 |---|---|
 | Un registro nombra el insumo, pero deja vacías las columnas del estanque y de la especie. | `AQ-001` exige al menos uno de `pondNo` y `species` en cada registro. Solo comprueba que uno de los dos esté relleno y no juzga si ese insumo es adecuado para esa especie. |

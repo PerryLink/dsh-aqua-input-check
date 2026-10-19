@@ -31,6 +31,35 @@ dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
 下表是示例集：第一行是详细走查，其余行是简短案例。
 
 
+#### 详细输出
+
+**工具** `aqua_input_check`
+
+**输入**
+
+~~~json
+{"rows":[{"序号":"1","塘口编号":"","养殖品种":"","投苗日期":"2026-02-20", ...}]}
+~~~
+ 
+**输出**
+
+~~~json
+{
+  "id": "dsh-aqua-input-check.AQ-001.de09b5a6",
+  "ruleId": "AQ-001",
+  "severity": "warn",
+  "locator": {
+    "row": 1,
+    "field": "pondNo"
+  },
+  "found": "第 1 行 pondNo、species 都为空",
+  "expected": "pondNo、species 至少应填写一项",
+  "fix": "补填塘口编号与养殖品种；本条只核对是否填写"
+}
+~~~
+
+*来源 `dsh-aqua-input-check/tests/fixtures/AQ-001/AQ-001-unsafe.json; dsh-aqua-input-check/tests/fixtures/AQ-001/cases.json; dsh-aqua-input-check/rules/aqua-input-check.yaml; dsh-aqua-input-check/tests/index.test.ts`*
+
 | 你会问 | 它怎么答 |
 |---|---|
 | 某条记录写了投入品名称，塘口与养殖品种两栏都空着。 | `AQ-001` 要求每条记录的 `pondNo` 与 `species` 至少填一个。它只核对两栏里填了一栏，不判断该投入品是否适用于该品种。 |

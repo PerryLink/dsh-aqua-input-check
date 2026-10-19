@@ -31,6 +31,35 @@ dsh --profile <name> --dump-config | grep 'dsh-aqua-input-check'
 नीचे दी गई तालिका उदाहरण-समुच्चय है: पहली पंक्ति विस्तृत केस है, बाकी संक्षिप्त केस हैं।
 
 
+#### विस्तृत आउटपुट
+
+**उपकरण** `aqua_input_check`
+
+**इनपुट**
+
+~~~json
+{"rows":[{"序号":"1","塘口编号":"","养殖品种":"","投苗日期":"2026-02-20", ...}]}
+~~~
+ 
+**आउटपुट**
+
+~~~json
+{
+  "id": "dsh-aqua-input-check.AQ-001.de09b5a6",
+  "ruleId": "AQ-001",
+  "severity": "warn",
+  "locator": {
+    "row": 1,
+    "field": "pondNo"
+  },
+  "found": "第 1 行 pondNo、species 都为空",
+  "expected": "pondNo、species 至少应填写一项",
+  "fix": "补填塘口编号与养殖品种；本条只核对是否填写"
+}
+~~~
+
+*स्रोत `dsh-aqua-input-check/tests/fixtures/AQ-001/AQ-001-unsafe.json; dsh-aqua-input-check/tests/fixtures/AQ-001/cases.json; dsh-aqua-input-check/rules/aqua-input-check.yaml; dsh-aqua-input-check/tests/index.test.ts`*
+
 | आपका सवाल | इसका जवाब |
 |---|---|
 | एक प्रविष्टि में आदान का नाम है, पर तालाब और जाति के कॉलम खाली हैं। | `AQ-001` हर प्रविष्टि में `pondNo` और `species` में से कम से कम एक की अपेक्षा करता है। यह केवल देखता है कि दोनों में से एक भरा है, और यह नहीं आँकता कि वह आदान उस जाति के लिए उपयुक्त है। |
