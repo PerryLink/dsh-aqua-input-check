@@ -3,6 +3,7 @@
 [English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-aqua-input-check?metric=downloads)](https://dshfind.com/en/plugins/PerryLink/dsh-aqua-input-check?ref=badge)
 
 `dsh-aqua-input-check` reads one aquaculture input register — the farm header plus one row per input record — and checks that register's own completeness and date arithmetic: that each record names its pond and species, that a named input records its quantity and use date, that the use date is not in the future, that harvesting respects the withdrawal period the record itself states, that a stocking record carries its source and quarantine certificate number, that the input type comes from your configured vocabulary, and that batch numbers are unique.
 It does not decide whether farming practice is compliant, whether the product is safe to eat, whether medication was appropriate, or whether a penalty applies.

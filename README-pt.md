@@ -8,6 +8,7 @@ dsh plugin --profile <name> add dsh-aqua-input-check
 
 
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-aqua-input-check?metric=downloads)](https://dshfind.com/en/plugins/PerryLink/dsh-aqua-input-check?ref=badge)
 
 `dsh-aqua-input-check` lê um registo de insumos de aquicultura —o cabeçalho da exploração mais uma linha por registo de insumo— e verifica a completude e a aritmética de datas desse registo: se cada registo indica o seu tanque e a sua espécie, se um insumo com nome registado indica a sua quantidade e a sua data de utilização, se a data de utilização não é futura, se a colheita respeita o período de retirada que o próprio registo declara, se o registo de povoamento anota a sua origem e o seu número de certificado de quarentena, se o tipo de insumo vem do vocabulário que você configurar e se os números de lote são únicos.
 Não decide se a prática de cultivo está em conformidade, se o produto é seguro para consumo, se a medicação foi adequada ou se é devida uma sanção.
