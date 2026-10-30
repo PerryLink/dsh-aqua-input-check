@@ -91,23 +91,11 @@ quarantine certificate, that the input type comes from your vocabulary, and that
 **not** decide whether farming practice is compliant, whether the product is safe to eat, whether medication was
 appropriate, or whether a penalty applies.
 
-> ### ⚠️ What this plugin deliberately does not know
+> ### ⚠️ Read this before trusting a citation in the report
 >
-> **It ships no withdrawal periods.** `AQ-004` checks that the harvest date is at least as many days after the use
-> date as **the record's own withdrawal-period column says**. So a finding means "**by the withdrawal period you
-> recorded, harvest came N days early**" — never "this product is unsafe". Residue safety needs a test result,
-> which this plugin cannot see. A record with no harvest date reports itself in `skipped` rather than assuming a
-> period.
+> **`excerpt` status is per rule, not uniform.** Some rules quote the clause verbatim (`kind: direct`), some are derived from the principle of the cited articles (`kind: derived-from-principle`, capped at `warn`), and some use thresholds your institution configures (`kind: institutional-configuration`, capped at `info`). The pack never paraphrases a quotation: when the text was not obtained, the `excerpt` field says so and the reasoning lives in `note`; a test asserts that no rule claims a quotation it does not have. **For any rule still marked as not obtained, replace the `excerpt` with the real clause and raise `kind` to `direct` once the text is in hand.**
 >
-> **It ships no list of permitted or prohibited inputs.** `AQ-006` checks that the input type is one you
-> configured; whether a product may lawfully be used requires the prohibited-drug list and the product's approval
-> number, and this plugin does not go there.
->
-> **Every `excerpt` in the rule pack says, in so many words, that the clause text was not obtained.** The regime
-> lives in 《水产养殖质量安全管理规定》, NY 5361, NY/T 755 and GB 13078. The verification pass could not
-> retrieve verbatim clause text, so the pack states the gap in the `excerpt` field itself and keeps every rule at
-> `warn` or `info`. **When the texts are in hand, replace each `excerpt` with the real clause and raise `kind`
-> to `direct`.**
+> The conclusion is the reviewer's: this plugin lists differences it can point to in the material and does not decide facts or compliance.
 
 ## Compatibility
 
