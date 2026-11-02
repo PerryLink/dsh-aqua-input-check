@@ -1,0 +1,3 @@
+req_id,metric,threshold,actual,script,evidence_sha256,pass,source,counted
+CHK-AQUA-INPUT-CHECK-A01,vitest 真实运行,33/33,33,npx vitest run,92a468a0de688b8be8fdb5c3b136acd501acc201413029daa3d15976a7832a17,true,public/synthetic,false
+CHK-AQUA-INPUT-CHECK-A02,失败用例数,0,0,npx vitest run,92a468a0de688b8be8fdb5c3b136acd501acc201413029daa3d15976a7832a17,true,public/synthetic,false
