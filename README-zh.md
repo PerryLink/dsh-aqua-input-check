@@ -1,6 +1,6 @@
 # dsh-aqua-input-check — 水产养殖投入品记录齐备与休药期日期核对
 
-## 快速试跑（1 分钟）
+### 快速试跑（1 分钟）
 
 ```bash
 node samples/quickstart/run.mjs --check
