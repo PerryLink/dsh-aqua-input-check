@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-label="dsh-aqua-input-check 结构图：登记表的栏与七条规则组成的点阵，输出分成 issues[] 与 skipped[] 两条通道，结论留给审核人">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#f9f6fd"/><stop offset="1" stop-color="#e4eaf8"/></linearGradient>
+<filter id="soft" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#16122c" flood-opacity="0.10"/></filter>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4B67B4"/></marker>
+</defs>
+<rect width="1100" height="660" fill="url(#bg)"/>
+<text x="44" y="58" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="28" font-weight="700">dsh-aqua-input-check</text>
+<text x="44" y="86" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="15">aqua_input_check 读一份登记表：七条规则只看这些栏，差异回到行号与栏名；未执行的逐条说明。</text>
+<rect x="914.0" y="36" width="142.0" height="26" rx="13.0" fill="#f5f2fb"/>
+<text x="926.0" y="53.08" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12">规则包 v2026.1 · 7 条</text>
+<rect x="44" y="108" width="682" height="438" rx="20" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="62" y="132" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12">登记表 rows[]（JSON / YAML，只读）× 规则包</text>
+<text x="708" y="132" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="end">列名已归一</text>
+<rect x="250" y="146" width="460" height="44" rx="9" fill="#f5f2fb"/>
+<text x="62" y="168" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12">规则 · 严重级</text>
+<text x="281.0" y="165" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">塘口</text>
+<text x="281.0" y="182" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">品种</text>
+<text x="345.0" y="165" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">投入品</text>
+<text x="345.0" y="182" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">名称·用量</text>
+<text x="406.0" y="165" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">使用</text>
+<text x="406.0" y="182" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">日期</text>
+<text x="462.0" y="165" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">休药期</text>
+<text x="462.0" y="182" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">天数</text>
+<text x="518.0" y="165" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">起捕</text>
+<text x="518.0" y="182" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">日期</text>
+<text x="582.0" y="165" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">苗种</text>
+<text x="582.0" y="182" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">来源·检疫</text>
+<text x="642.0" y="165" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">投入品</text>
+<text x="642.0" y="182" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">类型</text>
+<text x="688.0" y="165" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">批次</text>
+<text x="688.0" y="182" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" text-anchor="middle">编号</text>
+<line x1="56" y1="234" x2="714" y2="234" stroke="#dcd8ea" stroke-width="1"/>
+<text x="62" y="208" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13.5" font-weight="700">AQ-001</text>
+<rect x="117.0" y="196" width="39.0" height="16" rx="8.0" fill="#f5f2fb"/>
+<text x="124.0" y="207.23" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="9.5" font-weight="700">warn</text>
+<text x="62" y="227" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">塘口与品种至少一项</text>
+<circle cx="281.0" cy="212" r="5" fill="#4B67B4"/>
+<rect x="56" y="234" width="658" height="44" fill="#faf8fe"/>
+<line x1="56" y1="278" x2="714" y2="278" stroke="#dcd8ea" stroke-width="1"/>
+<text x="62" y="252" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13.5" font-weight="700">AQ-002</text>
+<rect x="117.0" y="240" width="39.0" height="16" rx="8.0" fill="#f5f2fb"/>
+<text x="124.0" y="251.23" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="9.5" font-weight="700">warn</text>
+<text x="62" y="271" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">有名称则须有用量·日期</text>
+<line x1="345.0" y1="256" x2="406.0" y2="256" stroke="#4B67B4" stroke-width="1.6" opacity="0.32"/>
+<circle cx="345.0" cy="256" r="5" fill="#4B67B4"/>
+<circle cx="406.0" cy="256" r="5" fill="#4B67B4"/>
+<line x1="56" y1="322" x2="714" y2="322" stroke="#dcd8ea" stroke-width="1"/>
+<text x="62" y="296" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13.5" font-weight="700">AQ-003</text>
+<rect x="117.0" y="284" width="39.0" height="16" rx="8.0" fill="#f5f2fb"/>
+<text x="124.0" y="295.23" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="9.5" font-weight="700">warn</text>
+<text x="62" y="315" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">使用日期不晚于核对日</text>
+<circle cx="406.0" cy="300" r="5" fill="#4B67B4"/>
+<rect x="56" y="322" width="658" height="44" fill="#faf8fe"/>
+<line x1="56" y1="366" x2="714" y2="366" stroke="#dcd8ea" stroke-width="1"/>
+<text x="62" y="340" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13.5" font-weight="700">AQ-004</text>
+<rect x="117.0" y="328" width="39.0" height="16" rx="8.0" fill="#f5f2fb"/>
+<text x="124.0" y="339.23" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="9.5" font-weight="700">warn</text>
+<text x="62" y="359" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">使用日期+休药期≤起捕</text>
+<line x1="406.0" y1="344" x2="518.0" y2="344" stroke="#4B67B4" stroke-width="1.6" opacity="0.32"/>
+<circle cx="406.0" cy="344" r="5" fill="#4B67B4"/>
+<circle cx="462.0" cy="344" r="5" fill="#4B67B4"/>
+<circle cx="518.0" cy="344" r="5" fill="#4B67B4"/>
+<line x1="56" y1="410" x2="714" y2="410" stroke="#dcd8ea" stroke-width="1"/>
+<text x="62" y="384" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13.5" font-weight="700">AQ-005</text>
+<rect x="117.0" y="372" width="39.0" height="16" rx="8.0" fill="#f5f2fb"/>
+<text x="124.0" y="383.23" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="9.5" font-weight="700">warn</text>
+<text x="62" y="403" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">有投苗则须有来源·检疫</text>
+<circle cx="582.0" cy="388" r="5" fill="#4B67B4"/>
+<rect x="56" y="410" width="658" height="44" fill="#faf8fe"/>
+<line x1="56" y1="454" x2="714" y2="454" stroke="#dcd8ea" stroke-width="1"/>
+<text x="62" y="428" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13.5" font-weight="700">AQ-006</text>
+<rect x="122.0" y="416" width="34.0" height="16" rx="8.0" fill="#f5f2fb"/>
+<text x="129.0" y="427.23" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="9.5" font-weight="700">info</text>
+<text x="62" y="447" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">类型取值随本机构口径</text>
+<circle cx="642.0" cy="432" r="5" fill="none" stroke="#4B67B4" stroke-width="1.8" opacity="0.85"/>
+<text x="62" y="472" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="13.5" font-weight="700">AQ-007</text>
+<rect x="117.0" y="460" width="39.0" height="16" rx="8.0" fill="#f5f2fb"/>
+<text x="124.0" y="471.23" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="9.5" font-weight="700">warn</text>
+<text x="62" y="491" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">批次编号全表唯一</text>
+<circle cx="688.0" cy="476" r="5" fill="#4B67B4"/>
+<line x1="62" y1="500" x2="708" y2="500" stroke="#dcd8ea" stroke-width="1"/>
+<text x="62" y="518" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">实心点 = 该条规则读这一栏；连线 = 同一条规则把几栏放在一起读。</text>
+<text x="62" y="535" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">空心点 = 投入品类型取值口径未配置（values 为空），默认 skipped 并写明原因。</text>
+<rect x="752" y="118" width="304" height="182" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="772" y="146" fill="#4B67B4" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14.5" font-weight="700">issues[]</text>
+<rect x="1000.0" y="128" width="36.0" height="18" rx="9.0" fill="#f5f2fb"/>
+<text x="1008.0" y="140.57" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="10.5">2 条</text>
+<text x="772" y="176" fill="#4d5261" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">AQ-001 · 第 1 行 · pondNo</text>
+<text x="772" y="196" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12">pondNo、species 都为空</text>
+<text x="772" y="232" fill="#4d5261" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">AQ-004 · 第 2 行 · harvestAt</text>
+<text x="772" y="252" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12">19 天 &lt; 记录自己写的 30 天</text>
+<text x="772" y="284" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">每条差异都带 行号 + 栏名 + 应填</text>
+<rect x="752" y="316" width="304" height="136" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="772" y="344" fill="#4d5261" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14.5" font-weight="700">skipped[]</text>
+<rect x="1000.0" y="326" width="36.0" height="18" rx="9.0" fill="#f5f2fb"/>
+<text x="1008.0" y="338.57" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="10.5">2 条</text>
+<text x="772" y="376" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">AQ-006 · values 未配置</text>
+<text x="772" y="400" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">AQ-007 · 材料没有批次编号列</text>
+<text x="772" y="432" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">空 issues ≠ 没问题：两条通道一起读</text>
+<rect x="752" y="468" width="304" height="78" rx="18" fill="#ffffff" stroke="#4B67B4" stroke-width="1.6" filter="url(#soft)"/>
+<text x="772" y="496" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5" font-weight="700">审核人</text>
+<text x="772" y="518" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">结论不在报告里</text>
+<text x="772" y="536" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="10.5">issues 与 skipped 一起读</text>
+<path d="M726 330 H738" fill="none" stroke="#4B67B4" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M738 209 V507" fill="none" stroke="#4B67B4" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="738" y1="209" x2="750" y2="209" stroke="#4B67B4" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="738" y1="384" x2="750" y2="384" stroke="#4B67B4" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="738" y1="507" x2="750" y2="507" stroke="#4B67B4" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="44" y1="564" x2="1056" y2="564" stroke="#dcd8ea" stroke-width="1"/>
+<text x="44" y="588" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">严重级跟着证据走：derived-from-principle ≤ warn · institutional-configuration ≤ info；excerpt 必须是逐字引文</text>
+<text x="44" y="612" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">config：rulesFile · disabledRules · onlyRules · timeoutMs ｜ 只读材料 · 无网络 · 不调用模型</text>
+</svg>

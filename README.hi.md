@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-flow-dark.svg">
-  <img src="docs/assets/dsh-aqua-input-check-flow-light.svg" width="100%" alt="dsh-aqua-input-check डेटा प्रवाह: rows[] आदान रजिस्टर → aqua_input_check उपकरण → rules/*.yaml नियम-पैक (AQ-001..AQ-007) → issues[] + skipped[] रिपोर्ट → समीक्षक का निर्णय; कॉन्फ़िग rulesFile / disabledRules / onlyRules / timeoutMs से आता है">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-hero-en-dark.webp">
+  <img src="docs/assets/dsh-aqua-input-check-hero-en-light.webp" width="100%" alt="dsh-aqua-input-check: बाईं ओर प्लगइन का नाम और मूल्य-पंक्तियाँ; दाईं ओर जलकृषि आदान रजिस्टर जिसमें तालाब और जाति के खाने खाली हैं और लिखी हुई 30 दिन की प्रतीक्षा-अवधि की तुलना उपयोग के 19 दिन बाद की कटाई से होती है; नीचे AQ-001 और AQ-004 के अंतर-कार्ड और रिपोर्ट पंक्ति — निर्णय समीक्षक के पास रहता है">
 </picture>
 
 # dsh-aqua-input-check
@@ -43,6 +43,11 @@ dsh plugin --profile <name> add dsh-aqua-input-check
 - **किसके लिए है**: जलकृषि फ़ार्म के रिकॉर्ड रखने वाले; कमांड लाइन की ज़रूरत नहीं — सामग्री चैट में सौंप दीजिए।
 - **आप क्या देते हैं**: वह मूल सामग्री जिस पर जाँच चलती है (तालिका, रजिस्टर या दस्तावेज़); मूल कभी नहीं बदला जाता। Excel को पहले JSON/YAML में बदला जा सकता है, प्लेटफ़ॉर्म समर्थन करे तो चैट में ही।
 - **आपको क्या मिलता है**: «कौन-सी पंक्ति, कौन-सा कॉलम, क्या कमी है, कैसे सुधारें» की सूची; जो जाँच चल नहीं पाई वह `skipped` में कारण सहित दर्ज होती है।
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-aqua-input-check-flow-v5-light.svg" width="100%" alt="dsh-aqua-input-check की संरचना: सात नियम (AQ-001..AQ-007) पंक्तियों में और रजिस्टर के कॉलम-समूह स्तंभों में — भरा हुआ बिंदु दिखाता है कि नियम उस कॉलम को पढ़ता है, और AQ-006 खोखला है क्योंकि उसकी शब्दावली खाली आती है। मैट्रिक्स से दो चैनल निकलते हैं — issues[] पंक्ति और कॉलम से स्थित, और skipped[] कारणों के साथ — और समीक्षक तक पहुँचते हैं">
+</picture>
 
 ## तीन चरणों में शुरुआत
 
@@ -307,7 +312,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"aqua_input_check","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":2}
 ```
 
-नमूना इनपुट `samples/quickstart/input/` में, अपेक्षित आउटपुट `samples/quickstart/expected/result.json` में, और स्क्रीनशॉट `docs/assets/quickstart.png` में है। README की छवियाँ [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) से प्रोग्रामेटिक रूप में बनती हैं (Python + Pillow) और स्क्रिप्ट दोबारा चलाई जा सकती है; पुराना एकल-स्किन फ़्लो चित्र और डेमो छवियाँ बाहरी लिंक के लिए `docs/assets/` में बनी रहती हैं, जबकि README केवल नई हल्की/गहरी जोड़ी को संदर्भित करते हैं।
+नमूना इनपुट `samples/quickstart/input/` में, अपेक्षित आउटपुट `samples/quickstart/expected/result.json` में, और स्क्रीनशॉट `docs/assets/quickstart.png` में है। README की छवियाँ [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) से प्रोग्रामेटिक रूप में बनती हैं (hero बैनर के लिए Pillow, संरचना चित्र के लिए हाथ से लिखा SVG) और स्क्रिप्ट दोबारा चलाई जा सकती है; पुराना एकल-स्किन फ़्लो चित्र और डेमो छवियाँ बाहरी लिंक के लिए `docs/assets/` में बनी रहती हैं, जबकि README केवल नए hero और flow-v5 संरचना चित्रों को संदर्भित करते हैं, दोनों हल्के और गहरे रूप में।
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `aqua`, `input`
 

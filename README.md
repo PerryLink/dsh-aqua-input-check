@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-flow-dark.svg">
-  <img src="docs/assets/dsh-aqua-input-check-flow-light.svg" width="100%" alt="dsh-aqua-input-check 数据流：rows[] 投入品记录 → aqua_input_check 工具 → rules/*.yaml 规则包（AQ-001..AQ-007）→ issues[] + skipped[] 报告 → 审核人裁决；配置经 rulesFile / disabledRules / onlyRules / timeoutMs 注入">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-hero-zh-dark.webp">
+  <img src="docs/assets/dsh-aqua-input-check-hero-zh-light.webp" width="100%" alt="dsh-aqua-input-check 配图：左列是插件名与价值句；右侧是一份水产养殖投入品记录——塘口与品种空着、休药期写着 30 天而起捕日只隔了 19 天，下方是 AQ-001 与 AQ-004 两张差异卡与报告行：2 条差异、2 条未执行，结论留给审核人">
 </picture>
 
 # dsh-aqua-input-check
@@ -43,6 +43,11 @@ dsh plugin --profile <name> add dsh-aqua-input-check
 - **给谁用**：水产养殖场记录员、投入品管理员；不用懂命令行，在对话里把材料交给它即可。
 - **你交什么**：这项核对用到的原始材料（表格、清单或文书）；不改原件。Excel 可先转成 JSON/YAML，对话里也能代转。
 - **它交什么**：一份「哪一行、哪一栏、差什么、怎么补」的清单；没能执行的检查逐条列入 `skipped` 并写明原因。
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-aqua-input-check-flow-v5-light.svg" width="100%" alt="dsh-aqua-input-check 结构图：七条规则（AQ-001..AQ-007）为行、登记表的栏为列的矩阵，圆点表示该条规则读这一栏；右侧两条通道 issues[] 与 skipped[] 汇到审核人，结论不在报告里">
+</picture>
 
 ## 三步上手
 
@@ -307,7 +312,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"aqua_input_check","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":2}
 ```
 
-样例输入在 `samples/quickstart/input/`，期望输出在 `samples/quickstart/expected/result.json`，截图见 `docs/assets/quickstart.png`。README 配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Python + Pillow），可重复执行；旧的单版流程图与演示图保留在 `docs/assets/` 供外链使用，README 只引用新生成的深浅双版。
+样例输入在 `samples/quickstart/input/`，期望输出在 `samples/quickstart/expected/result.json`，截图见 `docs/assets/quickstart.png`。README 配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成——hero 横幅用 Pillow 画、结构图用手写 SVG 画——可重复执行；旧的单版流程图与演示图保留在 `docs/assets/` 供外链使用，README 只引用新生成的 hero 与 flow-v5 结构图（各含深浅双版）。
 
 Topics：`deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `aqua`, `input`
 

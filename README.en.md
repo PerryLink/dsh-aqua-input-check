@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-flow-dark.svg">
-  <img src="docs/assets/dsh-aqua-input-check-flow-light.svg" width="100%" alt="dsh-aqua-input-check data flow: rows[] input register → aqua_input_check tool → rules/*.yaml rule pack (AQ-001..AQ-007) → issues[] + skipped[] report → reviewer verdict; config flows in via rulesFile / disabledRules / onlyRules / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-hero-en-dark.webp">
+  <img src="docs/assets/dsh-aqua-input-check-hero-en-light.webp" width="100%" alt="dsh-aqua-input-check: the plugin name and its value lines on the left; on the right an aquaculture input register whose pond and species cells are blank and whose stated 30-day withdrawal period is compared with a harvest 19 days after use, then the AQ-001 and AQ-004 finding cards and the report line — the verdict stays with the reviewer">
 </picture>
 
 # dsh-aqua-input-check
@@ -43,6 +43,11 @@ It does not decide whether farming practice is compliant, whether the product is
 - **Who it is for**: aquaculture record keepers; no command line required — hand the material over in chat.
 - **What you give it**: the source material the check works on (a table, register, or document); the original is never modified. Excel can be converted to JSON/YAML first, in chat if the platform supports it.
 - **What you get back**: a list of "which row, which column, what is missing, how to fix it"; every check that could not run is listed in `skipped` with its reason.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-aqua-input-check-flow-v5-light.svg" width="100%" alt="dsh-aqua-input-check structure: a matrix with the seven rules (AQ-001..AQ-007) as rows and the register's field groups as columns; a filled dot means the rule reads that column, and AQ-006 is hollow because its vocabulary ships empty. Two channels leave the matrix — issues[] located by row and column, and skipped[] with reasons — and feed the reviewer">
+</picture>
 
 ## Three-step setup
 
@@ -307,7 +312,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"aqua_input_check","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":2}
 ```
 
-The sample input lives in `samples/quickstart/input/`, the expected output in `samples/quickstart/expected/result.json`, and a screenshot in `docs/assets/quickstart.png`. The README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) and are safe to re-run; the older single-skin flow diagram and demo images stay in `docs/assets/` for external deep links, while the READMEs reference only the new light/dark pair.
+The sample input lives in `samples/quickstart/input/`, the expected output in `samples/quickstart/expected/result.json`, and a screenshot in `docs/assets/quickstart.png`. The README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow for the hero banner, hand-written SVG for the structure diagram) and are safe to re-run; the older single-skin flow diagram and demo images stay in `docs/assets/` for external deep links, while the READMEs reference only the new hero and flow-v5 structure diagram, each in light and dark.
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `aqua`, `input`
 

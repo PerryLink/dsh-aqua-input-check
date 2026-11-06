@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-flow-dark.svg">
-  <img src="docs/assets/dsh-aqua-input-check-flow-light.svg" width="100%" alt="Flujo de datos de dsh-aqua-input-check: registro rows[] → herramienta aqua_input_check → paquete de reglas rules/*.yaml (AQ-001..AQ-007) → informe issues[] + skipped[] → veredicto del revisor; la configuración entra por rulesFile / disabledRules / onlyRules / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-hero-en-dark.webp">
+  <img src="docs/assets/dsh-aqua-input-check-hero-en-light.webp" width="100%" alt="dsh-aqua-input-check: el nombre y las frases de valor a la izquierda; a la derecha, un registro de insumos de acuicultura con las celdas de estanque y especie en blanco y un periodo de retiro declarado de 30 días frente a una cosecha 19 días después del uso; debajo, las tarjetas AQ-001 y AQ-004 y la línea del informe — el veredicto queda en manos del revisor">
 </picture>
 
 # dsh-aqua-input-check
@@ -43,6 +43,11 @@ No decide si la práctica de cultivo cumple la normativa, ni si el producto es a
 - **Para quién es**: encargados de los registros de una granja acuícola; no hace falta línea de comandos, basta entregar el material en el chat.
 - **Qué entrega usted**: el material fuente sobre el que trabaja la comprobación (una tabla, un registro o un documento); el original nunca se modifica. Excel puede convertirse antes a JSON/YAML, en el propio chat si la plataforma lo permite.
 - **Qué recibe**: una lista de «qué fila, qué columna, qué falta, cómo corregirlo»; cada comprobación que no pudo ejecutarse aparece en `skipped` con su motivo.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-aqua-input-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-aqua-input-check-flow-v5-light.svg" width="100%" alt="Estructura de dsh-aqua-input-check: una matriz con las siete reglas (AQ-001..AQ-007) como filas y los grupos de columnas del registro como columnas; un punto relleno indica que la regla lee esa columna, y AQ-006 aparece hueco porque su vocabulario viene vacío. Dos canales salen de la matriz — issues[] ubicado por fila y columna, y skipped[] con motivos — y llegan al revisor">
+</picture>
 
 ## Instalación en tres pasos
 
@@ -307,7 +312,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"aqua_input_check","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":2}
 ```
 
-La entrada de muestra vive en `samples/quickstart/input/`, la salida esperada en `samples/quickstart/expected/result.json` y una captura en `docs/assets/quickstart.png`. Las imágenes del README se generan programáticamente con [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) y el script puede reejecutarse; el diagrama de flujo antiguo de una sola piel y las imágenes de demostración se conservan en `docs/assets/` para los enlaces externos, mientras que los README solo referencian el nuevo par claro/oscuro.
+La entrada de muestra vive en `samples/quickstart/input/`, la salida esperada en `samples/quickstart/expected/result.json` y una captura en `docs/assets/quickstart.png`. Las imágenes del README se generan programáticamente con [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow para el banner hero, SVG escrito a mano para el diagrama de estructura) y el script puede reejecutarse; el diagrama de flujo antiguo de una sola piel y las imágenes de demostración se conservan en `docs/assets/` para los enlaces externos, mientras que los README solo referencian el nuevo hero y el diagrama de estructura flow-v5, cada uno en claro y oscuro.
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `aqua`, `input`
 
