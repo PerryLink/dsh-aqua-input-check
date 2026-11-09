@@ -1,19 +1,29 @@
 {
   "schemaVersion": 1,
   "tier": "L1+ingest",
-  "input_formats": ["json", "yaml", "csv", "docx", "xlsx", "xlsm"],
-  "outputs": ["markdown", "json"],
+  "input_formats": [
+    "json",
+    "yaml",
+    "csv",
+    "docx",
+    "xlsx",
+    "xlsm"
+  ],
+  "outputs": [
+    "markdown",
+    "json"
+  ],
   "rules": {
     "total": 7,
-    "executed": 5,
-    "skipped": 2,
+    "executed": 6,
+    "skipped": 1,
     "manual": 0,
     "unsupported": 0
   },
   "benchmark": {
     "kind": "quickstart-sample",
     "corpus_size": 3,
-    "note": "3-row CSV probe through dsh-table-ingest; not a real-world P/R measurement",
+    "note": "3-row CSV through dsh-table-ingest: 6/7 rules run, 1 skips on the empty inputType vocabulary; not a real-world P/R",
     "measured_at": "2026-11-09"
   },
   "limits": [
