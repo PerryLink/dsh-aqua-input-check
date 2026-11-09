@@ -9,7 +9,7 @@
 import { canonicalJson } from './shared/report.ts'
 import { DISCLAIMER } from './shared/wording.ts'
 import type { Issue, Report, Severity } from './shared/report.ts'
-import type { IngestMeta } from './ingest.ts'
+import type { IngestMeta } from './shared/ingest.ts'
 
 const SEVERITY_ORDER: readonly Severity[] = ['error', 'warn', 'info']
 

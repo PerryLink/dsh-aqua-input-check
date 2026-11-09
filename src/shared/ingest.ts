@@ -15,8 +15,8 @@
 
 import { readFile } from 'node:fs/promises'
 import { extname, resolve } from 'node:path'
-import { MaterialError } from './shared/table.ts'
-import type { TableSpec } from './shared/table.ts'
+import { MaterialError } from './table.ts'
+import type { TableSpec } from './table.ts'
 
 /** Extensions that go through the optional ingest layer. */
 const DOCUMENT_EXTENSIONS = new Set(['.docx', '.xlsx', '.xlsm', '.csv', '.tsv'])

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { needsIngest, readTableDocument } from '../src/ingest.ts'
+import { needsIngest, readTableDocument } from '../src/shared/ingest.ts'
 import { SPEC } from '../src/model.ts'
 
 describe('optional document ingest', () => {
