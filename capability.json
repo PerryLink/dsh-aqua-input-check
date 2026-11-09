@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "tier": "L1+ingest",
+  "input_formats": ["json", "yaml", "csv", "docx", "xlsx", "xlsm"],
+  "outputs": ["markdown", "json"],
+  "rules": {
+    "total": 7,
+    "executed": 5,
+    "skipped": 2,
+    "manual": 0,
+    "unsupported": 0
+  },
+  "benchmark": {
+    "kind": "quickstart-sample",
+    "corpus_size": 3,
+    "note": "3-row CSV probe through dsh-table-ingest; not a real-world P/R measurement",
+    "measured_at": "2026-11-09"
+  },
+  "limits": [
+    "6/7 条规则的 excerpt 仍是本次未取得，尚未逐字核到",
+    "文档入口需要另装 dsh-table-ingest；只识别与台账字段同构的表",
+    "不做合规判定、不判断用药是否恰当"
+  ]
+}
