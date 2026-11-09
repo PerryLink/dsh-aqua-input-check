@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.14
+
+### Added
+
+- Optional document input (docx/xlsx/csv) through `dsh-table-ingest`.
+- Shared execution ledger and capability card; en/zh docs only.
+
 ## [0.2.11] - 2026-10-18
 
 ### Changed
