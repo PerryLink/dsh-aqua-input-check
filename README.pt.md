@@ -49,6 +49,11 @@ Não decide se a prática de cultivo está em conformidade, se o produto é segu
   <img src="docs/assets/dsh-aqua-input-check-flow-v5-light.svg" width="100%" alt="Estrutura do dsh-aqua-input-check: uma matriz com as sete regras (AQ-001..AQ-007) como linhas e os grupos de colunas do registo como colunas; um ponto preenchido indica que a regra lê essa coluna, e AQ-006 aparece vazado porque o seu vocabulário vem vazio. Dois canais saem da matriz — issues[] localizado por linha e coluna, e skipped[] com motivos — e chegam ao revisor">
 </picture>
 
+![dsh-aqua-input-check: execução real de terminal](docs/assets/dsh-aqua-input-check-demo.gif)
+
+*Repetição animada de uma execução real registrada neste repositório.*
+
+
 ## Instalação em três passos
 
 1. **Instale** (escolha um canal):

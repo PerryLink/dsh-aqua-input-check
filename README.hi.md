@@ -49,6 +49,11 @@ dsh plugin --profile <name> add dsh-aqua-input-check
   <img src="docs/assets/dsh-aqua-input-check-flow-v5-light.svg" width="100%" alt="dsh-aqua-input-check की संरचना: सात नियम (AQ-001..AQ-007) पंक्तियों में और रजिस्टर के कॉलम-समूह स्तंभों में — भरा हुआ बिंदु दिखाता है कि नियम उस कॉलम को पढ़ता है, और AQ-006 खोखला है क्योंकि उसकी शब्दावली खाली आती है। मैट्रिक्स से दो चैनल निकलते हैं — issues[] पंक्ति और कॉलम से स्थित, और skipped[] कारणों के साथ — और समीक्षक तक पहुँचते हैं">
 </picture>
 
+![dsh-aqua-input-check का असली टर्मिनल रन](docs/assets/dsh-aqua-input-check-demo.gif)
+
+*इस रिपॉज़िटरी में दर्ज असली रन का एनिमेटेड रीप्ले।*
+
+
 ## तीन चरणों में शुरुआत
 
 1. **इंस्टॉल करें** (कोई एक चैनल चुनें):
