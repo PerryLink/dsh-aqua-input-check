@@ -11,6 +11,8 @@
 
 Un plugin verificador de solo datos para DeepSeek Harness: lee un registro de insumos (la cabecera de la granja más una fila por registro), aplica el paquete de reglas versionado que incluye (AQ-001..AQ-007) y solo enumera las diferencias que puede señalar dentro del material — nunca un veredicto de cumplimiento, nunca una atribución de responsabilidad.
 
+Última verificación: DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [Instalar](#instalación-en-tres-pasos) · [Configuración](#configuración) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -52,7 +54,6 @@ No decide si la práctica de cultivo cumple la normativa, ni si el producto es a
 ![dsh-aqua-input-check: ejecución real de terminal](docs/assets/dsh-aqua-input-check-demo.gif)
 
 *Repetición animada de una ejecución real registrada en este repositorio.*
-
 
 ## Instalación en tres pasos
 

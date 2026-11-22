@@ -11,6 +11,8 @@
 
 DeepSeek Harness के लिए एक डेटा-ओनली जाँच प्लगइन: एक आदान रजिस्टर पढ़ता है (फ़ार्म हेडर और हर प्रविष्टि की एक पंक्ति), साथ में आया संस्करणित नियम-पैक (AQ-001..AQ-007) लागू करता है, और सामग्री के भीतर उन्हीं अंतरों को सूचीबद्ध करता है जिन्हें वह इंगित कर सकता है — कभी कोई अनुपालन-निर्णय नहीं, कभी कोई उत्तरदायित्व-निर्धारण नहीं।
 
+अंतिम सत्यापन: DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [इंस्टॉल](#तीन-चरणों-में-शुरुआत) · [कॉन्फ़िगरेशन](#कॉन्फ़िगरेशन) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -52,7 +54,6 @@ dsh plugin --profile <name> add dsh-aqua-input-check
 ![dsh-aqua-input-check का असली टर्मिनल रन](docs/assets/dsh-aqua-input-check-demo.gif)
 
 *इस रिपॉज़िटरी में दर्ज असली रन का एनिमेटेड रीप्ले।*
-
 
 ## तीन चरणों में शुरुआत
 
