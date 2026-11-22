@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Aquaculture input check",
-    "description": "水产养殖投入品记录核对（按投入品用量、休药期与起捕间隔核对记录自洽，仅提示差异，不作出定性结论）"
+    "description": "Check an aquaculture input register for completeness and withdrawal-period date arithmetic — you get a list of which row, which column, and what to fix; the verdict stays with the reviewer."
   }
 }
